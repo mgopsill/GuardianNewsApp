@@ -9,11 +9,18 @@ import Combine
 import CombineSchedulers
 import Foundation
 
+protocol GuardianListViewModelDelegate: AnyObject {
+    func didTap(article: Article)
+}
+
 class GuardianListViewModel: ObservableObject {
+    weak var delegate: GuardianListViewModelDelegate?
+    
     typealias API = (Int) -> AnyPublisher<[Article], Error>
     
     // Inputs
     let loadMoreArticles: PassthroughSubject<Void, Never> = .init()
+    let tapArticle: PassthroughSubject<Article, Never> = .init()
     
     // Outputs
     @Published fileprivate(set) var state = State()
@@ -26,6 +33,10 @@ class GuardianListViewModel: ObservableObject {
             .filter { [unowned self] _ in self.state.canLoadNextPage }
             .flatMap { [unowned self] _ in guardianAPI(self.state.page) }
             .eraseToAnyPublisher()
+        
+        tapArticle.sink { [unowned self] article in
+            self.delegate?.didTap(article: article)
+        }.store(in: &cancellables)
         
         Publishers.Merge(guardianAPI(state.page), loadMore)
             .receive(on: scheduler)
