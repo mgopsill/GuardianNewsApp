@@ -31,14 +31,18 @@ class GuardianListViewModel: ObservableObject {
          scheduler: AnySchedulerOf<DispatchQueue> = DispatchQueue.main.eraseToAnyScheduler()) {
         let loadMore = loadMoreArticles
             .filter { [unowned self] _ in self.state.canLoadNextPage }
-            .flatMap { [unowned self] _ in guardianAPI(self.state.page) }
+            .flatMap({ _ -> AnyPublisher<[Article], Never> in
+                guardianAPI(self.state.page)
+                    .replaceError(with: [])
+                    .eraseToAnyPublisher()
+            })
             .eraseToAnyPublisher()
         
         tapArticle.sink { [unowned self] article in
             self.delegate?.didTap(article: article)
         }.store(in: &cancellables)
         
-        Publishers.Merge(guardianAPI(state.page), loadMore)
+        Publishers.Merge(guardianAPI(state.page), loadMore.setFailureType(to: Error.self))
             .receive(on: scheduler)
             .sink(receiveCompletion: onReceive,
                   receiveValue: onReceive)
