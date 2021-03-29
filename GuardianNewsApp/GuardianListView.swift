@@ -14,7 +14,7 @@ struct GuardianListView: View {
             List {
                 ForEach(viewModel.state.article) { article in
                     HStack {
-                        Image(systemName: "house")
+                        LoadableImage(imageLoader: ImageLoader(url: article.imageURL))
                             .frame(width: 50, height: 50)
                         VStack(spacing: 5) {
                             Text(article.fields.headline)
