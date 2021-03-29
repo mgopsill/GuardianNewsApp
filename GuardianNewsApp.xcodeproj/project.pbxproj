@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,26 @@
 		4DE5801A26109B9F005CCC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801926109B9F005CCC0C /* Assets.xcassets */; };
 		4DE5801D26109B9F005CCC0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801C26109B9F005CCC0C /* Preview Assets.xcassets */; };
 		4DE5802026109B9F005CCC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */; };
+		4DE5803926109BD3005CCC0C /* GuardianAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5803826109BD3005CCC0C /* GuardianAPI.swift */; };
+		4DE5803D26109CB9005CCC0C /* GuardianAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5803C26109CB9005CCC0C /* GuardianAPITests.swift */; };
+		4DE580432610A071005CCC0C /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DE580422610A071005CCC0C /* SampleResponse.json */; };
+		4DE580472610A546005CCC0C /* TestURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE580462610A546005CCC0C /* TestURLProtocol.swift */; };
+		4DE70E802610D59700B33594 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E7F2610D59700B33594 /* ResponseModel.swift */; };
+		4DE70E842610D5AC00B33594 /* ResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */; };
+		4DE70E8A2610D98900B33594 /* GuardianListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E892610D98900B33594 /* GuardianListViewModel.swift */; };
+		4DE70E922611B26600B33594 /* GuardianListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */; };
+		4DE70E972611B7CC00B33594 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE70E962611B7CC00B33594 /* CombineSchedulers */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DE5803126109BB1005CCC0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DE5800826109B9E005CCC0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DE5800F26109B9E005CCC0C;
+			remoteInfo = GuardianNewsApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4DE5801026109B9E005CCC0C /* GuardianNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuardianNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +43,28 @@
 		4DE5801C26109B9F005CCC0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DE5801F26109B9F005CCC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DE5802126109B9F005CCC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE5802C26109BB1005CCC0C /* GuardianNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardianNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE5803026109BB1005CCC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE5803826109BD3005CCC0C /* GuardianAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianAPI.swift; sourceTree = "<group>"; };
+		4DE5803C26109CB9005CCC0C /* GuardianAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianAPITests.swift; sourceTree = "<group>"; };
+		4DE580422610A071005CCC0C /* SampleResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
+		4DE580462610A546005CCC0C /* TestURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestURLProtocol.swift; sourceTree = "<group>"; };
+		4DE70E7F2610D59700B33594 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelTests.swift; sourceTree = "<group>"; };
+		4DE70E892610D98900B33594 /* GuardianListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListViewModel.swift; sourceTree = "<group>"; };
+		4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4DE5800D26109B9E005CCC0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE70E972611B7CC00B33594 /* CombineSchedulers in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DE5802926109BB1005CCC0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE5801226109B9E005CCC0C /* GuardianNewsApp */,
+				4DE5802D26109BB1005CCC0C /* GuardianNewsAppTests */,
 				4DE5801126109B9E005CCC0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE5801026109B9E005CCC0C /* GuardianNewsApp.app */,
+				4DE5802C26109BB1005CCC0C /* GuardianNewsAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +96,14 @@
 			isa = PBXGroup;
 			children = (
 				4DE5801326109B9E005CCC0C /* AppDelegate.swift */,
-				4DE5801526109B9E005CCC0C /* SceneDelegate.swift */,
 				4DE5801726109B9E005CCC0C /* ContentView.swift */,
+				4DE5803826109BD3005CCC0C /* GuardianAPI.swift */,
+				4DE5803C26109CB9005CCC0C /* GuardianAPITests.swift */,
+				4DE70E892610D98900B33594 /* GuardianListViewModel.swift */,
+				4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */,
+				4DE70E7F2610D59700B33594 /* ResponseModel.swift */,
+				4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */,
+				4DE5801526109B9E005CCC0C /* SceneDelegate.swift */,
 				4DE5801926109B9F005CCC0C /* Assets.xcassets */,
 				4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */,
 				4DE5802126109B9F005CCC0C /* Info.plist */,
@@ -73,6 +118,16 @@
 				4DE5801C26109B9F005CCC0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DE5802D26109BB1005CCC0C /* GuardianNewsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DE580462610A546005CCC0C /* TestURLProtocol.swift */,
+				4DE580422610A071005CCC0C /* SampleResponse.json */,
+				4DE5803026109BB1005CCC0C /* Info.plist */,
+			);
+			path = GuardianNewsAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +146,30 @@
 			dependencies = (
 			);
 			name = GuardianNewsApp;
+			packageProductDependencies = (
+				4DE70E962611B7CC00B33594 /* CombineSchedulers */,
+			);
 			productName = GuardianNewsApp;
 			productReference = 4DE5801026109B9E005CCC0C /* GuardianNewsApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4DE5802B26109BB1005CCC0C /* GuardianNewsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DE5803326109BB1005CCC0C /* Build configuration list for PBXNativeTarget "GuardianNewsAppTests" */;
+			buildPhases = (
+				4DE5802826109BB1005CCC0C /* Sources */,
+				4DE5802926109BB1005CCC0C /* Frameworks */,
+				4DE5802A26109BB1005CCC0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DE5803226109BB1005CCC0C /* PBXTargetDependency */,
+			);
+			name = GuardianNewsAppTests;
+			productName = GuardianNewsAppTests;
+			productReference = 4DE5802C26109BB1005CCC0C /* GuardianNewsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -107,6 +183,10 @@
 					4DE5800F26109B9E005CCC0C = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					4DE5802B26109BB1005CCC0C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4DE5800F26109B9E005CCC0C;
+					};
 				};
 			};
 			buildConfigurationList = 4DE5800B26109B9E005CCC0C /* Build configuration list for PBXProject "GuardianNewsApp" */;
@@ -118,11 +198,15 @@
 				Base,
 			);
 			mainGroup = 4DE5800726109B9E005CCC0C;
+			packageReferences = (
+				4DE70E952611B7CC00B33594 /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+			);
 			productRefGroup = 4DE5801126109B9E005CCC0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4DE5800F26109B9E005CCC0C /* GuardianNewsApp */,
+				4DE5802B26109BB1005CCC0C /* GuardianNewsAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +222,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DE5802A26109BB1005CCC0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE580432610A071005CCC0C /* SampleResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,12 +238,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE5801426109B9E005CCC0C /* AppDelegate.swift in Sources */,
+				4DE5803926109BD3005CCC0C /* GuardianAPI.swift in Sources */,
 				4DE5801626109B9E005CCC0C /* SceneDelegate.swift in Sources */,
+				4DE70E8A2610D98900B33594 /* GuardianListViewModel.swift in Sources */,
+				4DE70E802610D59700B33594 /* ResponseModel.swift in Sources */,
 				4DE5801826109B9E005CCC0C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DE5802826109BB1005CCC0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE5803D26109CB9005CCC0C /* GuardianAPITests.swift in Sources */,
+				4DE580472610A546005CCC0C /* TestURLProtocol.swift in Sources */,
+				4DE70E922611B26600B33594 /* GuardianListViewModelTests.swift in Sources */,
+				4DE70E842610D5AC00B33594 /* ResponseModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DE5803226109BB1005CCC0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DE5800F26109B9E005CCC0C /* GuardianNewsApp */;
+			targetProxy = 4DE5803126109BB1005CCC0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */ = {
@@ -323,6 +437,46 @@
 			};
 			name = Release;
 		};
+		4DE5803426109BB1005CCC0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EYT7Q6838H;
+				INFOPLIST_FILE = GuardianNewsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgopsill.GuardianNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuardianNewsApp.app/GuardianNewsApp";
+			};
+			name = Debug;
+		};
+		4DE5803526109BB1005CCC0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EYT7Q6838H;
+				INFOPLIST_FILE = GuardianNewsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mgopsill.GuardianNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuardianNewsApp.app/GuardianNewsApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,7 +498,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4DE5803326109BB1005CCC0C /* Build configuration list for PBXNativeTarget "GuardianNewsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DE5803426109BB1005CCC0C /* Debug */,
+				4DE5803526109BB1005CCC0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DE70E952611B7CC00B33594 /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DE70E962611B7CC00B33594 /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE70E952611B7CC00B33594 /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DE5800826109B9E005CCC0C /* Project object */;
 }
