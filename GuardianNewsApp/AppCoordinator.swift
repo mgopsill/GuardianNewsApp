@@ -26,6 +26,7 @@ final class AppCoordinator {
 
 extension AppCoordinator: GuardianListViewModelDelegate {
     func didTap(article: Article) {
-        router.pushViewController(UIViewController(), animated: true)
+        let viewController = UIHostingController(rootView: GuardianArticleView(article: article))
+        router.pushViewController(viewController, animated: true)
     }
 }

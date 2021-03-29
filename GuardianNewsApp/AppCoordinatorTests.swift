@@ -24,6 +24,7 @@ final class AppCoordinatorTests: XCTestCase {
         let subject = AppCoordinator(router: mockRouter)
         subject.didTap(article: .mock())
         XCTAssertNotNil(mockRouter.pushedViewController)
+        XCTAssertTrue(mockRouter.pushedViewController is UIHostingController<GuardianArticleView>)
     }
 }
 

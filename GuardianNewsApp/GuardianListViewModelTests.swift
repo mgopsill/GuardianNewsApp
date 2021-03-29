@@ -37,7 +37,7 @@ final class GuardianListViewModelTests: XCTestCase {
     }
     
     func testInitialState() {
-        XCTAssertEqual(subject.state.results.count, 0)
+        XCTAssertEqual(subject.state.article.count, 0)
         XCTAssertEqual(subject.state.page, 1)
         XCTAssertEqual(subject.state.canLoadNextPage, true)
     }
@@ -89,17 +89,17 @@ final class GuardianListViewModelTests: XCTestCase {
         }).store(in: &cancellables)
         
         XCTAssertEqual(state?.page, 1)
-        XCTAssertEqual(state?.results.count, 0)
+        XCTAssertEqual(state?.article.count, 0)
         XCTAssertEqual(state?.canLoadNextPage, true)
         
         testScheduler.advance(by: 1)
         XCTAssertEqual(state?.page, 2)
-        XCTAssertEqual(state?.results.count, 5)
+        XCTAssertEqual(state?.article.count, 5)
         XCTAssertEqual(state?.canLoadNextPage, true)
         
         testScheduler.advance(by: 2)
         XCTAssertEqual(state?.page, 3)
-        XCTAssertEqual(state?.results.count, 10)
+        XCTAssertEqual(state?.article.count, 10)
         XCTAssertEqual(state?.canLoadNextPage, true)
     }
     
@@ -115,7 +115,7 @@ final class GuardianListViewModelTests: XCTestCase {
         
         testScheduler.advance(by: 1)
         XCTAssertEqual(state?.page, 1)
-        XCTAssertEqual(state?.results.count, 0)
+        XCTAssertEqual(state?.article.count, 0)
         XCTAssertEqual(state?.canLoadNextPage, false)
     }
     
@@ -135,12 +135,12 @@ final class GuardianListViewModelTests: XCTestCase {
         
         testScheduler.advance(by: 1)
         XCTAssertEqual(state?.page, 1)
-        XCTAssertEqual(state?.results.count, 0)
+        XCTAssertEqual(state?.article.count, 0)
         XCTAssertEqual(state?.canLoadNextPage, false)
 
         testScheduler.advance(by: 2)
         XCTAssertEqual(state?.page, 1)
-        XCTAssertEqual(state?.results.count, 0)
+        XCTAssertEqual(state?.article.count, 0)
         XCTAssertEqual(state?.canLoadNextPage, false)
     }
     
