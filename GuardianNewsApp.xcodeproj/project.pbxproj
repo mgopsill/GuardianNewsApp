@@ -22,6 +22,9 @@
 		4DE70E8A2610D98900B33594 /* GuardianListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E892610D98900B33594 /* GuardianListViewModel.swift */; };
 		4DE70E922611B26600B33594 /* GuardianListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */; };
 		4DE70E972611B7CC00B33594 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE70E962611B7CC00B33594 /* CombineSchedulers */; };
+		4DE70E9B2611BEC600B33594 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70E9A2611BEC600B33594 /* AppCoordinator.swift */; };
+		4DE70EA12611BFAD00B33594 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70EA02611BFAD00B33594 /* Router.swift */; };
+		4DE70EA72611BFFA00B33594 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70EA62611BFFA00B33594 /* AppCoordinatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelTests.swift; sourceTree = "<group>"; };
 		4DE70E892610D98900B33594 /* GuardianListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListViewModel.swift; sourceTree = "<group>"; };
 		4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListViewModelTests.swift; sourceTree = "<group>"; };
+		4DE70E9A2611BEC600B33594 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4DE70EA02611BFAD00B33594 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4DE70EA62611BFFA00B33594 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		4DE5801226109B9E005CCC0C /* GuardianNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4DE70E9A2611BEC600B33594 /* AppCoordinator.swift */,
+				4DE70EA62611BFFA00B33594 /* AppCoordinatorTests.swift */,
 				4DE5801326109B9E005CCC0C /* AppDelegate.swift */,
 				4DE5801726109B9E005CCC0C /* ContentView.swift */,
 				4DE5803826109BD3005CCC0C /* GuardianAPI.swift */,
@@ -103,6 +111,7 @@
 				4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */,
 				4DE70E7F2610D59700B33594 /* ResponseModel.swift */,
 				4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */,
+				4DE70EA02611BFAD00B33594 /* Router.swift */,
 				4DE5801526109B9E005CCC0C /* SceneDelegate.swift */,
 				4DE5801926109B9F005CCC0C /* Assets.xcassets */,
 				4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */,
@@ -237,12 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE70EA12611BFAD00B33594 /* Router.swift in Sources */,
 				4DE5801426109B9E005CCC0C /* AppDelegate.swift in Sources */,
 				4DE5803926109BD3005CCC0C /* GuardianAPI.swift in Sources */,
 				4DE5801626109B9E005CCC0C /* SceneDelegate.swift in Sources */,
 				4DE70E8A2610D98900B33594 /* GuardianListViewModel.swift in Sources */,
 				4DE70E802610D59700B33594 /* ResponseModel.swift in Sources */,
 				4DE5801826109B9E005CCC0C /* ContentView.swift in Sources */,
+				4DE70E9B2611BEC600B33594 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE70EA72611BFFA00B33594 /* AppCoordinatorTests.swift in Sources */,
 				4DE5803D26109CB9005CCC0C /* GuardianAPITests.swift in Sources */,
 				4DE580472610A546005CCC0C /* TestURLProtocol.swift in Sources */,
 				4DE70E922611B26600B33594 /* GuardianListViewModelTests.swift in Sources */,
