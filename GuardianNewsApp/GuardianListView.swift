@@ -12,30 +12,29 @@ struct GuardianListView: View {
     
     var body: some View {
             List {
-                ForEach(viewModel.state.results) { result in
+                ForEach(viewModel.state.article) { article in
                     HStack {
                         Image(systemName: "house")
                             .frame(width: 50, height: 50)
                         VStack(spacing: 5) {
-                            Text(result.fields.headline)
+                            Text(article.fields.headline)
                                 .font(.system(size: 12, weight: .bold))
                         
-                            Text(result.fields.trailText)
+                            Text(article.fields.trailText)
                                 .font(.system(size: 10, weight: .light))
                         }
                     }
                     .padding()
                     .onAppear {
-                        if viewModel.state.results.last == result {
+                        if viewModel.state.article.last == article {
                             viewModel.loadMoreArticles.send(())
                         }
                     }.onTapGesture {
-//                        viewModel.didTap(result: result)
+                        viewModel.tapArticle.send(article)
                     }
                 }
             }
             .navigationTitle("Guardian")
-        //.onAppear(perform: viewModel.loadMoreArticles.send())
     }
 }
 

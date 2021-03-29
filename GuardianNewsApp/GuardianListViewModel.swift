@@ -54,12 +54,12 @@ class GuardianListViewModel: ObservableObject {
     }
     
     private func onReceive(_ batch: [Article]) {
-        state.results += batch
+        state.article += batch
         state.page += 1
     }
 
     struct State {
-        var results: [Article] = []
+        var article: [Article] = []
         var page: Int = 1
         var canLoadNextPage = true
     }
