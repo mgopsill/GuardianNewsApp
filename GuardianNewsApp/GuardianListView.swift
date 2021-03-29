@@ -34,7 +34,7 @@ struct GuardianListView: View {
                     }
                 }
             }
-            .navigationTitle("Guardian")
+            .navigationBarTitle("Guardian")
     }
 }
 
