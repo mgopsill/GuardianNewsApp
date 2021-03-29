@@ -44,7 +44,7 @@ final class GuardianListViewModelTests: XCTestCase {
     
     func testFetchingResultsUpdatesState() {
         testScheduler.schedule(after: testScheduler.now.advanced(by: 1)) { [unowned self] in
-            self.passthrough.send(Article.mockArticles())
+            self.passthrough.send(Article.mockArticles)
         }
         
         var state: GuardianListViewModel.State?
@@ -60,7 +60,7 @@ final class GuardianListViewModelTests: XCTestCase {
         var pageRequested: Int?
         let mockAPI: (Int) -> AnyPublisher<[Article], Error> = { int in
             pageRequested = int
-            return Just(Article.mockArticles()).setFailureType(to: Error.self).eraseToAnyPublisher()
+            return Just(Article.mockArticles).setFailureType(to: Error.self).eraseToAnyPublisher()
         }
 
         let viewModel = GuardianListViewModel(guardianAPI: mockAPI, scheduler: DispatchQueue.immediateScheduler.eraseToAnyScheduler())
@@ -76,11 +76,11 @@ final class GuardianListViewModelTests: XCTestCase {
 
     func testFetchingMoreResultsUpdatesStateAndAppendsNewResults() {
         testScheduler.schedule(after: testScheduler.now.advanced(by: 1)) { [unowned self] in
-            self.passthrough.send(Article.mockArticles())
+            self.passthrough.send(Article.mockArticles)
         }
         
         testScheduler.schedule(after: testScheduler.now.advanced(by: 2)) { [unowned self] in
-            self.passthrough.send(Article.mockArticles())
+            self.passthrough.send(Article.mockArticles)
         }
         
         var state: GuardianListViewModel.State?
@@ -125,7 +125,7 @@ final class GuardianListViewModelTests: XCTestCase {
         }
         
         testScheduler.schedule(after: testScheduler.now.advanced(by: 2)) { [unowned self] in
-            self.passthrough.send(Article.mockArticles())
+            self.passthrough.send(Article.mockArticles)
         }
         
         var state: GuardianListViewModel.State?
@@ -143,11 +143,31 @@ final class GuardianListViewModelTests: XCTestCase {
         XCTAssertEqual(state?.results.count, 0)
         XCTAssertEqual(state?.canLoadNextPage, false)
     }
+    
+    func testDidTapArticle() {
+        let mockDelegate = MockGuardianListViewModelDelegate()
+        subject.delegate = mockDelegate
+        
+        let article = Article.mock(id: 0)
+        subject.tapArticle.send(article)
+        XCTAssertEqual(mockDelegate.articleTapped, article)
+    }
 }
 
 extension Article {
-    static func mockArticles(count: Int = 5) -> [Article] {
+    static func mock(id: Int = 0) -> Article {
         let fields = Fields(headline: "headline", trailText: "text", body: "body", thumbnail: "thumb")
-        return (0..<count).map { Article(id: "\($0)", fields: fields) }
+        return Article(id: "\(id)", fields: fields)
+    }
+    
+    static var mockArticles: [Article] {
+        (0..<5).map(Article.mock)
+    }
+}
+
+final class MockGuardianListViewModelDelegate: GuardianListViewModelDelegate {
+    var articleTapped: Article?
+    func didTap(article: Article) {
+        articleTapped = article
     }
 }
