@@ -17,7 +17,8 @@ final class AppCoordinator {
     }
     
     func start() {
-        let viewController = UIHostingController(rootView: ContentView())
+        let viewModel = GuardianListViewModel()
+        let viewController = UIHostingController(rootView: GuardianListView(viewModel: viewModel))
         router.pushViewController(viewController, animated: false)
     }
 }

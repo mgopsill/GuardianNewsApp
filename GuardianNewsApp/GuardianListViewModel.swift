@@ -22,15 +22,12 @@ class GuardianListViewModel: ObservableObject {
     
     init(guardianAPI: @escaping API = GuardianAPI.loadNews,
          scheduler: AnySchedulerOf<DispatchQueue> = DispatchQueue.main.eraseToAnyScheduler()) {
-        let fetch = guardianAPI(state.page)
-            .share()
-        
         let loadMore = loadMoreArticles
             .filter { [unowned self] _ in self.state.canLoadNextPage }
-            .flatMap { _ in fetch }
+            .flatMap { [unowned self] _ in guardianAPI(self.state.page) }
             .eraseToAnyPublisher()
         
-        Publishers.Merge(fetch, loadMore)
+        Publishers.Merge(guardianAPI(state.page), loadMore)
             .receive(on: scheduler)
             .sink(receiveCompletion: onReceive,
                   receiveValue: onReceive)
