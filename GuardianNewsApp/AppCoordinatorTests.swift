@@ -18,6 +18,13 @@ final class AppCoordinatorTests: XCTestCase {
         XCTAssertNotNil(mockRouter.pushedViewController)
         XCTAssertTrue(mockRouter.pushedViewController is UIHostingController<GuardianListView>)
     }
+    
+    func testDidTapArticle() {
+        let mockRouter = MockRouter()
+        let subject = AppCoordinator(router: mockRouter)
+        subject.didTap(article: .mock())
+        XCTAssertNotNil(mockRouter.pushedViewController)
+    }
 }
 
 final class MockRouter: Router {

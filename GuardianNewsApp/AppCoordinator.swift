@@ -18,7 +18,14 @@ final class AppCoordinator {
     
     func start() {
         let viewModel = GuardianListViewModel()
+        viewModel.delegate = self
         let viewController = UIHostingController(rootView: GuardianListView(viewModel: viewModel))
         router.pushViewController(viewController, animated: false)
+    }
+}
+
+extension AppCoordinator: GuardianListViewModelDelegate {
+    func didTap(article: Article) {
+        router.pushViewController(UIViewController(), animated: true)
     }
 }
