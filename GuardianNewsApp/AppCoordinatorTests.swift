@@ -16,7 +16,7 @@ final class AppCoordinatorTests: XCTestCase {
         let subject = AppCoordinator(router: mockRouter)
         subject.start()
         XCTAssertNotNil(mockRouter.pushedViewController)
-        XCTAssertTrue(mockRouter.pushedViewController is UIHostingController<ContentView>)
+        XCTAssertTrue(mockRouter.pushedViewController is UIHostingController<GuardianListView>)
     }
 }
 

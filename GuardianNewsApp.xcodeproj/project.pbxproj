@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4DE5801426109B9E005CCC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5801326109B9E005CCC0C /* AppDelegate.swift */; };
 		4DE5801626109B9E005CCC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5801526109B9E005CCC0C /* SceneDelegate.swift */; };
-		4DE5801826109B9E005CCC0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5801726109B9E005CCC0C /* ContentView.swift */; };
+		4DE5801826109B9E005CCC0C /* GuardianListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE5801726109B9E005CCC0C /* GuardianListView.swift */; };
 		4DE5801A26109B9F005CCC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801926109B9F005CCC0C /* Assets.xcassets */; };
 		4DE5801D26109B9F005CCC0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801C26109B9F005CCC0C /* Preview Assets.xcassets */; };
 		4DE5802026109B9F005CCC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		4DE5801026109B9E005CCC0C /* GuardianNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuardianNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE5801326109B9E005CCC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE5801526109B9E005CCC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DE5801726109B9E005CCC0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DE5801726109B9E005CCC0C /* GuardianListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListView.swift; sourceTree = "<group>"; };
 		4DE5801926109B9F005CCC0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DE5801C26109B9F005CCC0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DE5801F26109B9F005CCC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				4DE70E9A2611BEC600B33594 /* AppCoordinator.swift */,
 				4DE70EA62611BFFA00B33594 /* AppCoordinatorTests.swift */,
 				4DE5801326109B9E005CCC0C /* AppDelegate.swift */,
-				4DE5801726109B9E005CCC0C /* ContentView.swift */,
+				4DE5801726109B9E005CCC0C /* GuardianListView.swift */,
 				4DE5803826109BD3005CCC0C /* GuardianAPI.swift */,
 				4DE5803C26109CB9005CCC0C /* GuardianAPITests.swift */,
 				4DE70E892610D98900B33594 /* GuardianListViewModel.swift */,
@@ -252,7 +252,7 @@
 				4DE5801626109B9E005CCC0C /* SceneDelegate.swift in Sources */,
 				4DE70E8A2610D98900B33594 /* GuardianListViewModel.swift in Sources */,
 				4DE70E802610D59700B33594 /* ResponseModel.swift in Sources */,
-				4DE5801826109B9E005CCC0C /* ContentView.swift in Sources */,
+				4DE5801826109B9E005CCC0C /* GuardianListView.swift in Sources */,
 				4DE70E9B2611BEC600B33594 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
