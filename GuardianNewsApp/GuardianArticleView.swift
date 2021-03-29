@@ -12,7 +12,7 @@ struct GuardianArticleView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                Image(systemName: "house")
+                LoadableImage(imageLoader: ImageLoader(url: article.imageURL))
                 Text(article.fields.headline)
                     .font(.headline)
                 Text(article.fields.trailText)
