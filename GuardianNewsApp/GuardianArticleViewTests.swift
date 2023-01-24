@@ -11,7 +11,7 @@ import XCTest
 
 @testable import GuardianNewsApp
 
-class GuardianArticleViewTests: XCTestCase {
+final class GuardianArticleViewTests: XCTestCase {
     func testView() {
         let view = GuardianArticleView(article: .mock())
         let hostingVC = UIHostingController(rootView: view)

@@ -26,7 +26,7 @@ final class GuardianListViewModelTests: XCTestCase {
     }
     
     override func setUp() {
-        testScheduler = DispatchQueue.testScheduler
+        testScheduler = DispatchQueue.test
         subject = GuardianListViewModel(guardianAPI: mockAPI, scheduler: testScheduler.eraseToAnyScheduler())
     }
     
@@ -63,7 +63,7 @@ final class GuardianListViewModelTests: XCTestCase {
             return Just(Article.mockArticles).setFailureType(to: Error.self).eraseToAnyPublisher()
         }
 
-        let viewModel = GuardianListViewModel(guardianAPI: mockAPI, scheduler: DispatchQueue.immediateScheduler.eraseToAnyScheduler())
+        let viewModel = GuardianListViewModel(guardianAPI: mockAPI, scheduler: DispatchQueue.immediate.eraseToAnyScheduler())
         viewModel.loadMoreArticles.send(())
         XCTAssertEqual(pageRequested, 2)
         

@@ -17,7 +17,7 @@ extension URLSession {
     }
 }
 
-class ImageLoader: ObservableObject {
+final class ImageLoader: ObservableObject {
     @Published var image: Image?
     
     var cancellable: AnyCancellable?

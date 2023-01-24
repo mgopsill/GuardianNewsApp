@@ -1,0 +1,6 @@
+# .slather.yml
+
+coverage_service: cobertura_xml
+xcodeproj: ./GuardianNewsApp.xcodeproj
+scheme: GuardianNewsApp
+output_directory: ./coverage_report/
