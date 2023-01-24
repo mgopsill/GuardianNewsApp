@@ -26,6 +26,8 @@ final class GuardianAPITests: XCTestCase {
             return (.success(Data([])), 0)
         }
         
+        Config.apiKey = "test"
+        
         let expectation = XCTestExpectation()
         GuardianAPI
             .loadNews(page: 0)
@@ -33,7 +35,7 @@ final class GuardianAPITests: XCTestCase {
                 let sentRequest = try! XCTUnwrap(request)
                 let queryItems = URLComponents(url: sentRequest.url!, resolvingAgainstBaseURL: false)?.queryItems
                 XCTAssertEqual(queryItems?["page"], "0")
-                XCTAssertEqual(queryItems?["api-key"], "***REMOVED***")
+                XCTAssertEqual(queryItems?["api-key"], "test")
                 XCTAssertEqual(queryItems?["show-fields"], "headline,trailText,body,thumbnail")
                 expectation.fulfill()
             }, receiveValue: { _ in })

@@ -9,6 +9,7 @@ Small Paginating App in SwiftUI and Combine with Unit Test
 
 **Notes**:
 
+- Requires an api key from [The Guardian](https://open-platform.theguardian.com/access/)
 - Dependencies by SPM
 - Tests co-located with source files
 - TODO: Some test coverage

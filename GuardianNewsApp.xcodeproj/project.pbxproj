@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0C02FA297FF617000FB98C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C02F9297FF617000FB98C /* Configuration.swift */; };
+		4D0C02FC297FF906000FB98C /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C02FB297FF906000FB98C /* ConfigurationTests.swift */; };
 		4DD2AA062611DA8900B59D30 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2AA052611DA8900B59D30 /* ImageLoader.swift */; };
 		4DD2AA132611DB8800B59D30 /* GuardianListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2AA122611DB8800B59D30 /* GuardianListViewTests.swift */; };
 		4DD2AA1C2611DC3B00B59D30 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 4DD2AA1B2611DC3B00B59D30 /* SnapshotTesting */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0C02F8297FF5DA000FB98C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D0C02F9297FF617000FB98C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4D0C02FB297FF906000FB98C /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		4DD2AA052611DA8900B59D30 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4DD2AA122611DB8800B59D30 /* GuardianListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianListViewTests.swift; sourceTree = "<group>"; };
 		4DD2AA1F2611DCA100B59D30 /* GuardianArticleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianArticleViewTests.swift; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		4DE5800726109B9E005CCC0C = {
 			isa = PBXGroup;
 			children = (
+				4D0C02F8297FF5DA000FB98C /* Config.xcconfig */,
 				4DE5801226109B9E005CCC0C /* GuardianNewsApp */,
 				4DE5802D26109BB1005CCC0C /* GuardianNewsAppTests */,
 				4DE5801126109B9E005CCC0C /* Products */,
@@ -122,23 +128,25 @@
 				4DE70E9A2611BEC600B33594 /* AppCoordinator.swift */,
 				4DE70EA62611BFFA00B33594 /* AppCoordinatorTests.swift */,
 				4DE5801326109B9E005CCC0C /* AppDelegate.swift */,
+				4DE5801926109B9F005CCC0C /* Assets.xcassets */,
+				4D0C02F9297FF617000FB98C /* Configuration.swift */,
+				4D0C02FB297FF906000FB98C /* ConfigurationTests.swift */,
 				4DE5803826109BD3005CCC0C /* GuardianAPI.swift */,
 				4DE5803C26109CB9005CCC0C /* GuardianAPITests.swift */,
 				4DE70EAC2611D58C00B33594 /* GuardianArticleView.swift */,
 				4DD2AA1F2611DCA100B59D30 /* GuardianArticleViewTests.swift */,
 				4DE5801726109B9E005CCC0C /* GuardianListView.swift */,
-				4DD2AA122611DB8800B59D30 /* GuardianListViewTests.swift */,
 				4DE70E892610D98900B33594 /* GuardianListViewModel.swift */,
 				4DE70E912611B26600B33594 /* GuardianListViewModelTests.swift */,
+				4DD2AA122611DB8800B59D30 /* GuardianListViewTests.swift */,
 				4DD2AA052611DA8900B59D30 /* ImageLoader.swift */,
+				4DE5802126109B9F005CCC0C /* Info.plist */,
+				4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */,
+				4DE5801B26109B9F005CCC0C /* Preview Content */,
 				4DE70E7F2610D59700B33594 /* ResponseModel.swift */,
 				4DE70E832610D5AC00B33594 /* ResponseModelTests.swift */,
 				4DE70EA02611BFAD00B33594 /* Router.swift */,
 				4DE5801526109B9E005CCC0C /* SceneDelegate.swift */,
-				4DE5801926109B9F005CCC0C /* Assets.xcassets */,
-				4DE5801E26109B9F005CCC0C /* LaunchScreen.storyboard */,
-				4DE5802126109B9F005CCC0C /* Info.plist */,
-				4DE5801B26109B9F005CCC0C /* Preview Content */,
 			);
 			path = GuardianNewsApp;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 				4DE70E802610D59700B33594 /* ResponseModel.swift in Sources */,
 				4DE5801826109B9E005CCC0C /* GuardianListView.swift in Sources */,
 				4DE70E9B2611BEC600B33594 /* AppCoordinator.swift in Sources */,
+				4D0C02FA297FF617000FB98C /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +305,7 @@
 				4DE580472610A546005CCC0C /* TestURLProtocol.swift in Sources */,
 				4DD2AA132611DB8800B59D30 /* GuardianListViewTests.swift in Sources */,
 				4DE70E922611B26600B33594 /* GuardianListViewModelTests.swift in Sources */,
+				4D0C02FC297FF906000FB98C /* ConfigurationTests.swift in Sources */,
 				4DE70E842610D5AC00B33594 /* ResponseModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +454,7 @@
 		};
 		4DE5802526109B9F005CCC0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0C02F8297FF5DA000FB98C /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

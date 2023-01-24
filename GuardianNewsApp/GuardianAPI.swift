@@ -23,7 +23,7 @@ enum GuardianAPI {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)!
         components.queryItems = [
             .init(name: "page", value: "\(page)"),
-            .init(name: "api-key", value: "***REMOVED***"),
+            .init(name: "api-key", value: Config.apiKey),
             .init(name: "show-fields", value: "headline,trailText,body,thumbnail"),
         ]
         return URLRequest(url: components.url!)
