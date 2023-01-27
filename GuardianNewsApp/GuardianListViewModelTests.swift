@@ -26,6 +26,7 @@ final class GuardianListViewModelTests: XCTestCase {
     }
     
     override func setUp() {
+        super.setUp()
         testScheduler = DispatchQueue.test
         subject = GuardianListViewModel(guardianAPI: mockAPI, scheduler: testScheduler.eraseToAnyScheduler())
     }
@@ -34,6 +35,7 @@ final class GuardianListViewModelTests: XCTestCase {
         cancellables = nil
         testScheduler = nil
         subject = nil
+        super.tearDown()
     }
     
     func testInitialState() {
